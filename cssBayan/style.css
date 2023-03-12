@@ -1,3 +1,61 @@
 body {
     background-color: antiquewhite;
 }
+
+img {
+    width: auto;
+}
+
+.container {
+    /* padding-left: 10vw;
+    padding-right: 10vw; */
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+    background-color: aqua;
+}
+
+.header-text {
+    text-align: left;
+
+}
+
+.content .lable-bayan {
+    text-align: left;
+}
+
+@media screen and (min-width: 0px) {
+    .container {
+        background-color: rgb(14, 7, 7);
+    }
+    img {
+        width: 100%;
+    }
+  }
+
+@media screen and (min-width: 320px) {
+    .container {
+        background-color: brown;
+    }
+    /* img {
+        width: 100%;
+    } */
+  }
+
+  @media screen and (min-width: 820px) {
+    .container {
+        background-color: rgb(157, 204, 29);
+    }
+    img {
+        width: auto;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .container {
+        background-color: rgb(20, 160, 216);
+    }
+    img {
+        width: auto;
+    }
+  }
