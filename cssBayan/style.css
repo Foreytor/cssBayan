@@ -4,6 +4,7 @@ body {
 
 img {
     width: auto;
+    display: none;
 }
 
 .container {
@@ -22,6 +23,14 @@ img {
 
 .content .lable-bayan {
     text-align: left;
+}
+
+.content:hover > img {
+    display: block;
+}
+
+.content {
+    background-color: aquamarine;
 }
 
 @media screen and (min-width: 0px) {
