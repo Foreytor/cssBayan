@@ -2,18 +2,33 @@ body {
     background-color: antiquewhite;
 }
 
-img {
-    width: auto;
-    display: none;
+p {
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
+
+.content:active p {
+    color: blue;
+}
+
+.img-mem {
+    width: auto;
+    /* display: none; */
+    margin-left: auto;
+    margin-right: auto;
+    animation: shows 1s;
+    opacity: 0;
+    height: 0;
+    transition: 1s;
+}
+
+
 .container {
-    /* padding-left: 10vw;
-    padding-right: 10vw; */
     margin-left: 10vw;
     margin-right: 10vw;
     text-align: center;
-    background-color: aqua;
+    cursor: pointer;
 }
 
 .header-text {
@@ -23,48 +38,85 @@ img {
 
 .content .lable-bayan {
     text-align: left;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.content:hover > img {
+.icon {
+    float: right;
+}
+
+.text-bayan {
+    float: left;
+    clear: right;
+}
+
+.icon-open {
+    display: none;
+}
+
+.content:hover > img.img-mem {
+    display: block;
+    height: auto;
+    opacity: 1;
+}
+
+.content:hover img.icon-open {
     display: block;
 }
 
+.content:hover .icon-close {
+    display: none;
+}
+
 .content {
-    background-color: aquamarine;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding-bottom: 1em;
 }
 
 @media screen and (min-width: 0px) {
-    .container {
-        background-color: rgb(14, 7, 7);
-    }
-    img {
-        width: 100%;
+    .img-mem {
+        max-width: 100%;
+        height: auto;
     }
   }
 
 @media screen and (min-width: 320px) {
-    .container {
-        background-color: brown;
+
+    .img-mem {
+        max-width: 100%;
+        height: auto;
+
     }
-    /* img {
-        width: 100%;
-    } */
   }
 
   @media screen and (min-width: 820px) {
-    .container {
-        background-color: rgb(157, 204, 29);
-    }
-    img {
+    .img-mem {
         width: auto;
+        height: 0;
     }
   }
 
   @media screen and (min-width: 1920px) {
-    .container {
-        background-color: rgb(20, 160, 216);
-    }
-    img {
+    .img-mem {
         width: auto;
+        height: 0;
+
+        opacity: 0;
+        height: 0;
     }
   }
+
+
+  @media (hover: none) {
+    .img-mem {
+        width: auto;
+        height: 0;
+
+        opacity: 0;
+        height: 0;
+    }
+}
